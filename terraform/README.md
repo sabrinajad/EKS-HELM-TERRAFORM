@@ -1,7 +1,7 @@
 DOCUMENTATION FOR DEPLOY APP WITH HELM ON EKS AND ACCESS APP FROM INTERNET:
 
 #(configure mypc with aws account)
-brew install awscli
+#brew install awscli
 cat .aws/credentials
 vim .aws/credentials #then put awsaccount iam user credentials accses and secret keys
 brew install terraform
