@@ -46,17 +46,17 @@
  * cat dockerfile
  * vim app.py  #ex: in app.py write thes then :wq     
  * __________________________________________
-  * from flask import Flask                 |
-  * app = Flask(__name__)                   |
-                                          |
-  * @app.route('/')                         |
-  * def hello_geek():                       |
-    * return '<h1>Hello from Sabrina</h2>'  |
-                                          |
-                                          |
-  * if __name__ == "__main__":              |
-    * app.run(debug=True)                   |
-* __________________________________________|
+  * from flask import Flask                 
+  * app = Flask(__name__)                   
+                                          
+  * @app.route('/')                         
+  * def hello_geek():                       
+    * return '<h1>Hello from Sabrina</h2>'  
+                                             
+                                            
+  * if __name__ == "__main__":              
+    * app.run(debug=True)                   
+* __________________________________________
   * vim requirements.txt  #i write the dir name this example is: <flask>
   * docker build --tag <my dockerhub username ex: sabrin9696>/<image name :ex python-docker> .
   * docker images
