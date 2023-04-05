@@ -11,7 +11,6 @@ _______________________________________________________________________________
 * terraform plan 
 * terraform apply
 ## Creating or updating a kubeconfig file for an Amazon EKS cluster (configure mypc with eks cluster)
-* aws sts get-caller-identity\n
 * aws eks update-kubeconfig --region <region code> --name <cluster name>
 * kubectl get svc
 ## Case1: if helm chart was from online repo:
