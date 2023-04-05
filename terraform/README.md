@@ -1,5 +1,5 @@
 # DOCUMENTATION FOR DEPLOY APP WITH HELM ON EKS AND ACCESS APP FROM INTERNET:
-
+_______________________________________________________________________________
 ## (configure mypc with aws account)
 * brew install awscli
 * cat .aws/credentials
@@ -71,7 +71,7 @@
   * kubectl get pods   
   * kubectl get svc #(to take the end point(external ip for loadbalancer) to release) and hit
   * kubectl get deployments
-done
+## done
 * ______________________________________________________________________________________________________________
 ## For any questions feel free to connect with me on: www.linkedin.com/in/sabrin-jadallah
 
