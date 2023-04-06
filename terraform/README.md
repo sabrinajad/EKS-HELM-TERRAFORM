@@ -13,7 +13,16 @@ _______________________________________________________________________________
 ## Creating or updating a kubeconfig file for an Amazon EKS cluster (configure mypc with eks cluster)
 * aws eks update-kubeconfig --region <region code> --name <cluster name>
 * kubectl get svc
-## Case1: if helm chart was from online repo:
+## Case1: if helm chart was from locally helm chart code files(my helm module^_^):
+ * helm install <ReleaseName> /<helm files dir path> #ex: helm install  sabrinpython  /Users/abougadallas/Downloads/
+  eks/myapp
+
+ * kubectl get all
+ * or
+ * kubectl get pods   
+ * kubectl get svc #(to take the end point(external ip for loadbalancer) to release) and hit
+ * kubectl get deployments
+## Case2: if helm chart was from online repo:
  * helm create <folder name>
  * cd <folder name>
  * helm repo add <reponame>  <  repo url ex: https://baranarda.github.io/python-app-helm/>
@@ -30,7 +39,7 @@ _______________________________________________________________________________
  * kubectl get pods   
  * kubectl get svc #(to take the end point(external ip for loadbalancer) to release) to hit
  * kubectl get deployments
-## Case2: if helm chart was from locally dockerfile customised with old locally helm chart code files(my helm module^_^):
+## Case3: if helm chart was from locally dockerfile customised with old locally helm chart code files(my helm module^_^):
 * name in chart.yaml file is name of locally dir the helm files
 * customise:in values.yaml shuold specify the <dockerhub username ex: sabrin9696>/<image name :ex python-docker> ex:
    * |image:
