@@ -5,7 +5,7 @@
 
 # DOCUMENTATION `Steps` and `Commands`:
 _______________________________________________________________________________
-## (configure mypc with aws account)
+## 1-Configure mypc with aws account
 * brew install awscli
 * cat .aws/credentials
 * vim .aws/credentials #then put awsaccount iam user credentials accses and secret keys
@@ -15,10 +15,11 @@ _______________________________________________________________________________
 * terraform init
 * terraform plan 
 * terraform apply
-## Creating or updating a kubeconfig file for an Amazon EKS cluster (configure mypc with eks cluster)
+## 2-Creating or updating a kubeconfig file for an Amazon EKS cluster (configure mypc with eks cluster)
 * aws eks update-kubeconfig --region <region code> --name <cluster name>
 * kubectl get svc
-## Case1: if helm chart was from locally helm chart code files(my helm module^_^):
+## 3-Deploy the Application by HelmChart ^_^ 
+### - Case1: if helm chart was from locally helm chart code files(my helm module^_^):
  * helm install <ReleaseName> /<helm files dir path> #ex: helm install  sabrinpython  /Users/abougadallas/Downloads/
   eks/myapp
 
@@ -27,7 +28,7 @@ _______________________________________________________________________________
  * kubectl get pods   
  * kubectl get svc #(to take the end point(external ip for loadbalancer) to release) and hit
  * kubectl get deployments
-## Case2: if helm chart was from online repo:
+### - Case2: if helm chart was from online repo:
  * helm create <folder name>
  * cd <folder name>
  * helm repo add <reponame>  <  repo url ex: https://baranarda.github.io/python-app-helm/>
@@ -35,7 +36,7 @@ _______________________________________________________________________________
  * helm install <reponame>/<ReleaseName>
  * helm list
  * kubectl get svc #(to take the end point(external ip for loadbalancer) to release)
- ## after install release if i custumiz our helm files for this installed releas(more than 1releas from 1chart):
+ #### after install release if i custumiz our helm files for this installed releas(more than 1releas from 1chart):
    * 1- helm repo update
    * 2- helm install <New ReleaseName> ./<dir name for helm files> 
    * 3-helm list
@@ -44,7 +45,7 @@ _______________________________________________________________________________
  * kubectl get pods   
  * kubectl get svc #(to take the end point(external ip for loadbalancer) to release) to hit
  * kubectl get deployments
-## Case3: if helm chart was from locally dockerfile customised with old locally helm chart code files(my helm module^_^):
+### - Case3: if helm chart was from locally dockerfile customised with old locally helm chart code files(my helm module^_^):
 * name in chart.yaml file is name of locally dir the helm files
 * customise:in values.yaml shuold specify the <dockerhub username ex: sabrin9696>/<image name :ex python-docker> ex:
    * |image:
