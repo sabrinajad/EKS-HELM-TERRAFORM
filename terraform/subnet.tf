@@ -5,8 +5,8 @@ resource "aws_subnet" "pub1" {
 
   tags = {
     Name = "pub1"
-     "kubernetes.io/role/elb"     = "1"  #incase we use old terraform version but now it know private and public auto)
-    "kubernetes.io/cluster/demo" = "owned"  
+     "kubernetes.io/role/elb"     = "1"  #to tell Kubernetes where to deploy internal Load Balancer incase we use old terraform version but now it know private and public auto)
+    "kubernetes.io/cluster/demo" = "owned"  # dont allows more than this cluster to use this VPC
   }
 }
 resource "aws_subnet" "prv1" {
@@ -16,7 +16,7 @@ resource "aws_subnet" "prv1" {
 
   tags = {
     Name = "prv1"
-     "kubernetes.io/role/internal-elb"     = "1"
+     "kubernetes.io/role/internal-elb"     = "1" #to tell Kubernetes where to deploy external Load Balancer 
     "kubernetes.io/cluster/demo" = "owned"
   }
 }
