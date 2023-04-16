@@ -87,6 +87,5 @@ _______________________________________________________________________________
   * kubectl get deployments
 ### done
 * ______________________________________________________________________________________________________________
-## For any questions feel free to connect with me on: www.linkedin.com/in/sabrin-jadallah
 
 
