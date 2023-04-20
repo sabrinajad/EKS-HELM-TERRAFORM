@@ -4,7 +4,6 @@
 ![alt text](Diagram.jpeg)
 
 # DOCUMENTATION `Steps` and `Commands`:
-### `EKS`  `Modules`  `Bastion`
 
 ## The Modules:
 
