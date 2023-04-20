@@ -1,4 +1,4 @@
-## (configure mypc with aws account)
+## Configure mypc with aws account
 * brew install awscli
 * cat .aws/credentials
 * vim .aws/credentials #then put awsaccount iam user credentials accses and secret keys
