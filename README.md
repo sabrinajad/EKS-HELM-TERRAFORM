@@ -35,27 +35,37 @@ kubectl get svc
  kubectl get deployments
  ```
 ### - Case2: if helm chart was from online repo:
- ```
- helm create <folder name>
- cd <folder name>
+```
  helm repo add <reponame>  <  repo url ex: https://baranarda.github.io/python-app-helm/>
  helm repo list
  helm install <reponame>/<ReleaseName>
  helm list
  kubectl get svc #(to take the end point(external ip for loadbalancer) to release)
  ```
- #### after install release if i custumiz our helm files for this installed releas(more than 1releas from 1chart):
+#### upgrade after install release
+##### if i want custumiz this installed releas and update:
+ overread
+ ```
+ helm upgrade <ReleaseName>./<helm files dir path> --set bla bla
+```
+deploy a new updated release (more than 1releas from 1chart):
+ ```
+ helm install <New ReleaseName>./<helm files dir path> --set bla bla
+```
+ ##### if i custumiz our helm files for this installed releas:
    ```
    helm repo update
-   helm install <New ReleaseName> ./<dir name for helm files> 
+   
+   -overread
+     helm  upgrade <ReleaseName> ./<dir name for helm files>   
+   -or if i want new updated release
+     helm install <New ReleaseName> ./<dir name for helm files>   
    helm list
- ```
- ```
- kubectl get all  #check Release(deployment)
- #or
- kubectl get pods   
- kubectl get svc #(to take the end point(external ip for loadbalancer) to release) to hit
- kubectl get deployments
+   kubectl get all  #check Release(deployment)
+   #or
+   kubectl get pods   
+   kubectl get svc #(to take the end point(external ip for loadbalancer) to release) to hit
+   kubectl get deployments
  ```
 ### - Case3: if helm chart was from locally dockerfile customised with old locally helm chart code files(my helm module^_^):
 * name in chart.yaml file is name of locally dir the helm files
