@@ -1,4 +1,3 @@
-_______________________________________________________________________________
 ## (configure mypc with aws account)
 * brew install awscli
 * cat .aws/credentials
