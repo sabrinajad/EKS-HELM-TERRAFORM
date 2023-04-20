@@ -43,7 +43,7 @@ kubectl get svc
  kubectl get svc #(to take the end point(external ip for loadbalancer) to release)
  ```
 #### upgrade after install release
-##### if i want custumiz this installed releas and update:
+##### -if i want custumiz this installed releas and update:
  overread
  ```
  helm upgrade <ReleaseName>./<helm files dir path> --set bla bla
@@ -52,7 +52,7 @@ deploy a new updated release (more than 1releas from 1chart):
  ```
  helm install <New ReleaseName>./<helm files dir path> --set bla bla
 ```
- ##### if i custumiz our helm files for this installed releas:
+ ##### -if i custumiz our helm files for this installed releas:
    ```
    helm repo update
    
