@@ -1,10 +1,10 @@
-## `EKS`  `Modules`  `Bastion`
 
 ##### This Terraform Code creates a custom VPC with public and private subnets, an EC2 bastion host with a security group in the public subnet, an EKS cluster with a network interface in the public subnet, and two EKS node groups in the public and private subnets. IAM roles are created for the EKS cluster and node groups, and the necessary policies are attached to them. Additionally, a null resource with remote-exec is used to copy the pem key to the bastion host so that the admin can access the node group from the bastion host. An Elastic IP is also allocated to the bastion host to provide a static public IP address.
 
 ![alt text](Diagram.jpeg)
 
 # DOCUMENTATION `Steps` and `Commands`:
+### `EKS`  `Modules`  `Bastion`
 
 ## The Modules:
 
